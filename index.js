@@ -93,6 +93,9 @@ const displayError = (element) =>{
     }else if(element.name === 'cardNumber' && !cardNumberCheck(element)){
         errors[1].textContent = 'Please enter a 16 digit number'
         errors[1].style.display = 'inline-block'
+    }else if(element.name === 'cardNumber' && !cardNumberCheck(element) && element.value.length > 16){
+        errors[1].textContent = 'Please enter a 16 digit number'
+        errors[1].style.display = 'inline-block'
     }
     else{
 
