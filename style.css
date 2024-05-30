@@ -17,6 +17,9 @@ input[type='text']{
     border: thin solid var(--clr-neutral-dark-violet);
     border-radius: .5rem;
 }
+input[type='text']:hover, .button{
+    cursor: pointer;
+}
 label{
     letter-spacing: .0813rem;
     text-transform: uppercase;

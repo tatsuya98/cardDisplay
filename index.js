@@ -43,7 +43,6 @@ const validNameCheck = (input) => {
 }
 
 const cardNumberCheck = (cardNumber) =>{
-    console.log(cardNumber.value)
     return /^[0-9]{16}$/.test(cardNumber.value)
 }
 const changeBorderColor = () => {
@@ -128,7 +127,6 @@ const pageSwitch = () =>{
 
 const updateCard = () =>{
     const params = new URL(window.location.href).searchParams
-    console.log(params)
     getCardNumber().textContent = params.get('cardNumber')
     getCardExpire().textContent = `${params.get('month')}/${params.get('year')}`
     getCardName().textContent = params.get('cardName')
