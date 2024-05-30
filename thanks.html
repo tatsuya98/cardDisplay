@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body onload="updateCard()">
+    <div class="container">
+      <main>
+        <aside class="bg">
+          <div class="front-card">
+            <img src="./images/bg-card-front.png" alt="" class="front" />
+            <img src="./images/card-logo.svg" alt="" class="logo" />
+            <span class="card-number">0000 0000 0000 0000</span>
+            <span class="card-name">Jane Appleseed</span>
+            <span class="card-expire">00/00</span>
+          </div>
+          <div class="back-card">
+            <img src="./images/bg-card-back.png" alt="" class="back" />
+            <span class="back-code">000</span>
+          </div>
+        </aside>
+        <section class="thanks-summary">
+          <div class="thanks">
+            <img src="./images/icon-complete.svg" alt="" class="complete" />
+            <h2>Thank you!</h2>
+            <p>We've added your card details</p>
+            <button type="button" class="button continue">Continue</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

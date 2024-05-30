@@ -1,0 +1,234 @@
+:root{
+    --clr-primary-error: hsl(0, 100%, 66%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-grayish-violet-300: hsl(270, 3%, 87%);
+    --clr-neutral-grayish-violet-400: hsl(279, 6%, 55%);
+    --clr-neutral-dark-violet: hsl(278, 68%, 11%);
+
+    --ff: 'Space Grotesk',sans-serif;
+}
+
+body{
+    font-family: var(--ff);
+    color: var(--clr-neutral-white);
+    font-size: 1.125rem;
+}
+input[type='text']{
+    border: thin solid var(--clr-neutral-dark-violet);
+    border-radius: .5rem;
+}
+label{
+    letter-spacing: .0813rem;
+    text-transform: uppercase;
+    font-size: .9375rem;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    max-width: 90rem;
+}
+form{
+    color: var(--clr-neutral-dark-violet);
+}
+span.error:nth-child(2){
+    margin-left: 3.5rem;
+}
+.back-card{
+    left: 30%;
+    width: fit-content;
+}
+.back-code{
+    top: 43%;
+    right: 13%;
+}
+.bg{
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+.button,.labels > *, .inputs > *,  #cardName, #cardNumber{
+    padding: .5rem;
+}
+.button{
+    width: 60%;
+    background-color: var(--clr-neutral-dark-violet);
+    color: var(--clr-neutral-white);
+    padding: 1rem;
+    border-style: none;
+    border-radius: .5rem;
+    place-self: flex-end;
+}
+.card-details{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: .5rem;
+    margin-bottom: 2rem;
+    place-self: flex-end;
+}
+.card-expire{
+    bottom: 1rem;
+    right: 9%;
+}
+.card-form{
+    margin-block: auto;
+    margin-inline: 1.25rem;
+}
+.card-info{
+    display: grid;
+}
+.card-name{
+    bottom: 1rem;
+    left: 2rem;
+    text-transform: uppercase;
+}
+
+.card-number{
+    bottom: 4rem;
+    left: 2rem;
+    font-size: 1.925rem;
+}
+
+.continue{
+    margin-top: 1rem;
+    place-self: center;
+}
+.error{
+    color: var(--clr-primary-error);
+    display: none;
+}
+.errors{
+    display: flex;
+    gap: 2rem;
+}
+.front, .back{
+    position: relative;
+}
+.front-card{
+    margin-bottom: 2rem;
+    left: 18%;
+    width: fit-content;
+}
+.front-card, .back-card{
+    position: relative;
+    margin-left: auto;
+}
+.front-card> *:not(.front),
+.back-card > *:not(.back){
+    position: absolute;
+    z-index: 2;
+    letter-spacing: .125rem
+}
+.inputs{
+    display: flex;
+    gap: .625rem;
+}
+
+.inputs > * {
+    width: 40%;
+}
+.labels{
+    display: flex;
+    gap: 2rem;
+}
+.logo{
+    top: 2rem;
+    left: 2rem;
+}
+.thanks{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+.thanks > h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.thanks > p{
+    font-weight: 500;
+    color: var(--clr-neutral-grayish-violet-400);
+}
+.thanks-summary{
+    width: 90%;
+    margin-left: 13rem;
+    color: var(--clr-neutral-dark-violet);
+    margin-block: auto;
+}
+#code{
+    margin-left: 1.5rem;
+    width: 100%;
+}
+
+@media(max-width: 60em){
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .card-info, .card-form{
+        display: grid;
+        gap: .5rem;
+        margin:0;
+        font-size: .875rem
+    }
+    .bg{
+        height: 15rem;
+        background-image: url(./images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .back-card, .front-card{
+        width: 17.75rem;
+        font-size: .8125rem;
+        margin-inline: auto;
+        left: revert;
+    }
+    .back-card{
+        bottom: 60%;
+        left: 2rem;
+    }
+    .back-code{
+        right: 12%;
+        font-size: .8125rem;
+    }
+    .button{
+        max-width: 20rem;
+        width: 100%;
+        place-self: center;
+    }
+    .card-details{
+        place-self: center;
+        width: 100%;
+        max-width: 20rem;
+        margin-bottom: 0;
+    }
+    .card-info{
+        height: 20.625rem;
+    }
+    .card-number{
+        font-size: 1.0625rem;
+        bottom: 3rem;
+        left: 2rem;
+    }
+    .front-card{
+        right: 2rem;
+        top: 55%;
+        z-index: 2;
+    }
+    .labels{
+        font-size: .875rem;
+        gap: .5rem;
+    }
+    .logo{
+        top: 1rem;
+        width: 3.4375rem;
+    }
+    .thanks-summary{
+        margin-inline: auto;
+    }
+}
